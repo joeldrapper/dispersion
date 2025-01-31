@@ -88,7 +88,10 @@ module Dispersion
 		end
 
 		def visit_call_node(node)
-			highlight Tokens::FUNCTION, node.message_loc
+			unless node.name in :[] | :[]=
+				highlight Tokens::FUNCTION, node.message_loc
+			end
+
 			super
 		end
 

@@ -18,11 +18,11 @@ Gem::Specification.new do |spec|
 	spec.metadata["changelog_uri"] = spec.homepage
 	spec.metadata["funding_uri"] = "https://github.com/sponsors/joeldrapper"
 
-	spec.files = Dir.chdir(__dir__) do
-		`git ls-files -z`.split("\x0").reject do |f|
-			(File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor])
-		end
-	end
+	spec.files = Dir[
+		"README.md",
+		"LICENSE.txt",
+		"lib/**/*.rb"
+	]
 
 	spec.require_paths = ["lib"]
 	spec.add_dependency "prism"

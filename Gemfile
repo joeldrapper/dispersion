@@ -5,4 +5,9 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in dispersion.gemspec
 gemspec
 
-gem "green_dots", path: "../green_dots"
+gem "quickdraw", github: "joeldrapper/quickdraw"
+
+group :development do
+	gem "rubocop"
+	gem "ruby-lsp", github: "Shopify/ruby-lsp"
+end

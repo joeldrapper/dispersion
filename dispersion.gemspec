@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 	spec.authors = ["Joel Drapper"]
 	spec.email = ["joel@drapper.me"]
 
-	spec.summary = "Syntac Highlighter for Ruby"
+	spec.summary = "Syntax Highlighter for Ruby"
 	spec.homepage = "https://github.com/joeldrapper/dispersion"
 	spec.license = "MIT"
 	spec.required_ruby_version = ">= 3.0.0"

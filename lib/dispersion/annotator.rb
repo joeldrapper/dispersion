@@ -147,7 +147,10 @@ module Dispersion
 
 		def visit_if_node(node)
 			highlight Tokens::KEYWORD, node.if_keyword_loc
-			highlight Tokens::KEYWORD, node.end_keyword_loc
+
+			unless node.if_keyword == "elsif"
+				highlight Tokens::KEYWORD, node.end_keyword_loc
+			end
 
 			if node.then_keyword&.length == 1
 				highlight Tokens::OPERATOR, node.then_keyword_loc
